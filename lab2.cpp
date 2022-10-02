@@ -1,14 +1,14 @@
 
 /*
-Çàâäàííÿ:
-Ðåàë³çóâàòè êëàñ Fazzynumber äëÿ ðîáîòè ç íå÷³òêèìè ÷èñëàìè, ÿê³
-ïðåäñòàâëÿþòüñÿ òð³éêàìè ÷èñåë (õ – e1, õ, õ + e2). Äëÿ ÷èñåë À = (À - ài, À, À + àr) ³ Â = (Â - bi, Â, Â + br) 
-àðèôìåòè÷í³ îïåðàö³¿ âèêîíóþòüñÿ ïî íàñòóïíèõ ôîðìóëàõ:
-• äîäàâàííÿ À + Â = (À + Â - ài - br, À + Â, À + Â + ar + br);
-• âèðàõóâàííÿ À - Â = (À - Â - ài - br, À - Â, À - Â + ai + br);
-• ìíîæåííÿ À * Â = (A * B – B * ai – À * bi + ai * bi, À * Â, A * B + B * ai + À * bi + ai * bi);
-• îáåðíåíå ÷èñëî À = (1 / (À + ar), 1/ À, 1 / (À – ài)), À > 0;
-• ä³ëåííÿ À / Â = ((A - ai) / (Â + bi), À / Â, (À + àr) / (Â - bi)), Â > 0;
+Ã‡Ã Ã¢Ã¤Ã Ã­Ã­Ã¿:
+ÃÃ¥Ã Ã«Â³Ã§Ã³Ã¢Ã Ã²Ã¨ ÃªÃ«Ã Ã± Fazzynumber Ã¤Ã«Ã¿ Ã°Ã®Ã¡Ã®Ã²Ã¨ Ã§ Ã­Ã¥Ã·Â³Ã²ÃªÃ¨Ã¬Ã¨ Ã·Ã¨Ã±Ã«Ã Ã¬Ã¨, Ã¿ÃªÂ³
+Ã¯Ã°Ã¥Ã¤Ã±Ã²Ã Ã¢Ã«Ã¿Ã¾Ã²Ã¼Ã±Ã¿ Ã²Ã°Â³Ã©ÃªÃ Ã¬Ã¨ Ã·Ã¨Ã±Ã¥Ã« (Ãµ â€“ e1, Ãµ, Ãµ + e2). Ã„Ã«Ã¿ Ã·Ã¨Ã±Ã¥Ã« Ã€ = (Ã€ - Ã i, Ã€, Ã€ + Ã r) Â³ Ã‚ = (Ã‚ - bi, Ã‚, Ã‚ + br) 
+Ã Ã°Ã¨Ã´Ã¬Ã¥Ã²Ã¨Ã·Ã­Â³ Ã®Ã¯Ã¥Ã°Ã Ã¶Â³Â¿ Ã¢Ã¨ÃªÃ®Ã­Ã³Ã¾Ã²Ã¼Ã±Ã¿ Ã¯Ã® Ã­Ã Ã±Ã²Ã³Ã¯Ã­Ã¨Ãµ Ã´Ã®Ã°Ã¬Ã³Ã«Ã Ãµ:
+â€¢ Ã¤Ã®Ã¤Ã Ã¢Ã Ã­Ã­Ã¿ Ã€ + Ã‚ = (Ã€ + Ã‚ - Ã i - br, Ã€ + Ã‚, Ã€ + Ã‚ + ar + br);
+â€¢ Ã¢Ã¨Ã°Ã ÃµÃ³Ã¢Ã Ã­Ã­Ã¿ Ã€ - Ã‚ = (Ã€ - Ã‚ - Ã i - br, Ã€ - Ã‚, Ã€ - Ã‚ + ai + br);
+â€¢ Ã¬Ã­Ã®Ã¦Ã¥Ã­Ã­Ã¿ Ã€ * Ã‚ = (A * B â€“ B * ai â€“ Ã€ * bi + ai * bi, Ã€ * Ã‚, A * B + B * ai + Ã€ * bi + ai * bi);
+â€¢ Ã®Ã¡Ã¥Ã°Ã­Ã¥Ã­Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã€ = (1 / (Ã€ + ar), 1/ Ã€, 1 / (Ã€ â€“ Ã i)), Ã€ > 0;
+â€¢ Ã¤Â³Ã«Ã¥Ã­Ã­Ã¿ Ã€ / Ã‚ = ((A - ai) / (Ã‚ + bi), Ã€ / Ã‚, (Ã€ + Ã r) / (Ã‚ - bi)), Ã‚ > 0;
 */
 
 
@@ -20,28 +20,17 @@ using namespace std;
 int main()
 {
 	Fazzynumber();
-	Fazzynumber one(13, 4, 5);
+	Fazzynumber one;
 	Fazzynumber two;
 	Fazzynumber three;
-	//one = one.Init(12, 2, 4);
-	//two = two.Init(15, 3, 6);
+	one = one.Init(12, 2, 4);
+	two = two.Init(15, 3, 6);
 	//one = one.Read();
 	//two = two.Read();
 	three = one;
 	one.toString();
 	two.toString();
-	Fazzynumber c;
-	c.result(c = one + two);
-	c.Display();
-	c.result(c = one - two);
-	c.Display();
-	c.result(c = one * two);
-	c.Display();
-	c.result(c = one ^ two);
-	c.Display_error1(three);
-	c.result(c = one / two);
-	c.Display_error2(two);
-	/*one.result(one.sum(two));
+	one.result(one.sum(two));
 	one.Display();
 	one = three;
 	one.result(one.subtract(two));
@@ -54,7 +43,7 @@ int main()
 	one.Display_error1(three);
 	one = three;
 	one.result(one.division(two));
-	one.Display_error2(two);*/
+	one.Display_error2(two);
 	system("pause");
 	return 0;
 	
